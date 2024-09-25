@@ -1,11 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-	<head><title>Administrator</title></head>
+	<head><title>Administrator</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/create_admin.css' %}">
+	</head>
 	<body>
-		<h1>This is an Admin page </h1>
 	
 	<form method="POST">
             {% csrf_token %}
+	    <h4>This is an Admin page </h4><br>
+
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
