@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static %}
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>LearnNest</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<script src="{% static 'js/dropdown.js' %}" defer></script>
+	</head>
+	<body>
+		<header>
+			<nav> <div class="nav_header">
+					<div class="nav_logo">
+						<a href="#">LEARN<span>NEST</span>
+						</a>
+					</div>
+					<div class="nav_menu_btn" id="menu-btn">
+						<span><i class="ri-menu-line"></i>
+					</div>
+				</div>
+			</nav>
+		</header>
+        <header class="header">
+                <div class="dropdown">
+                        <span>Curriculum</span>
+                        <div class="dropdown-content">
+                                <a href="#" id="edexcel-link">Edexcel</a>
+                                <a href="#" id="igcse-link">IGCSE</a>
+                                <a href="#" id="eight-four-four-link">8-4-4</a>
+                                <a href="#cbc">CBC</a>
+                        </div>
+                </div>
+
+		<div class="dropdown" id="services">
+			<a href="#functioning">Services</a>
+		</div>
+
+                <div class="dropdown">
+                        <span> About Us</span>
+                        <div id="dropdown-about" class="dropdown-content">
+                                <a href="#team">Our Team</a>
+                                <a href="#mission">Our Mission</a>
+                        </div>
+                </div>
+                {% if user.is_authenticated %}
+                <div id="user-profile">
+                        <div class="user-icon">
+				<span>👤</span>
+                        </div>
+                        <div class="user-dropdown_content">
+                                <a href="manage-account">Manage Account</a>
+                                <form method="POST" action="{% url 'logout' %}">
+                                        {% csrf_token %}
+                                        <button type="submit" style="background:none; border:none;">
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                        </button>
+                                </form>
+                        </div>
+                </div>
+                {% else %}
+                <div class="auth_link">
+                        <a href="{% url 'login' %}"> <i class="fas fa-sign-in-alt"></i> Login</a>/
+                        <a href="{% url 'sign_up' %}"> <i class="fas fa-user-plus"></i> Sign Up</a>
+                </div>
+                {% endif %}
+        </header>
+        <div class="body-container">
+                <div class="text">
+			<h1>LET'S BEGIN!<br />A<span>WORLD OF</span>LEARNING AWAITS!</h1>
+			<p>
+			Our flexible curriculum allows your child to learn at their own pace, nurtuturing curiosiity and creativity. Whether you'are new to homeschooling or looking to enhance your current approach, LearnNest provides the tools, resources, and support to help your child thrive-all from the comfort of home. Join us, and watch your child's love for learning grow</p>
+
+                </div>
+
+                <div class="photo">
+                        <img src="{% static 'media/learner.avif' %}" alt="Learner using a Laptop">
+                </div>
+        </div>
+
+	<div id="description">Hello Description</div>
+
+
+
+	<footer>
+		<p>Contact us at support@learnnest.com</p>
+		<p>&copy; 2024 Nurturing Minds at Home. </p>
+<style>
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+</style>
+	</footer>
+	</body>
+</html>

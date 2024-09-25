@@ -1,0 +1,77 @@
+.curriculum-ad {
+	background-color: #f4f9ff;
+	border: 2px solid #004a99;
+	border-radius: 10px;
+	padding: 20px;
+	max-width: 700px;
+	margin: auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	font-family: 'Ariel' san-serif;
+}
+
+.curriculum-ad:hover {
+	transform: scale(1.03);
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.curriculum-ad h2 {
+	color: #004a99;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.curriculum-ad p {
+	color: #333;
+	line-height: 1.6;
+	margin-bottom: 16px;
+}
+
+.curriculum-ad ul {
+	margin-top: 15px;
+	list-style-type: none;
+	padding: 0px;
+}
+
+.curriculum-ad li {
+	padding-left: 20px;
+	position: relative;
+	margin-bottom: 10px;
+	color: #004a99;
+}
+
+.curriculum-ad li:before {
+	content: '✔'; /* replace with icon */
+	position: absolute;
+	left: 0;
+	color: #00b300;
+}
+
+.curriculum-ad .key-features {
+	background-color: #e6f7ff;
+	border-left: 4px solid #004a99;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+.curriculum-ad .key-features {
+	background-color: #e6f7ff;
+	border-left: 4px solid #004a99;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+.curriculum-ad .cta-button {
+	display: inline-block;
+	background-color: #004a99;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.curriculum-ad .cta-button:hover {
+	background-color: #0066cc;
+}

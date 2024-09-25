@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Tutor Login page</title>
+	<style>
+		body {
+			background-color: #f0f0f0;
+			font-family: 'Ariel' sans-serif;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0px;
+		}
+		form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+		h4 {
+			color: #686cd9;
+			justify-content: center;
+			align-items: center;
+		}
+		input, button {
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+		}
+		button {
+			background-color: #007BFF;
+			display: flex;
+			justify-content: center;
+			justify-items: center;
+			color: white;
+			width: 50%;
+			border: none;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #0056b3;
+		}
+	</style>
+
+	</head>
+	<body>
+		<form method="post">
+			<h3>Tutor login page</h3>
+			{% csrf_token %}
+			{{ form.as_p }}
+			{% if error_message %}
+				<p style="color: red;">{{ error_message }}</p>
+				{% endif %}
+			<button type="submit">Login</button>
+			<div class="forgot_password">
+				<a href="{% url 'reset_password' %}">Forgot password?</a>
+			</div>
+		</form>
+	</body>
+</html>

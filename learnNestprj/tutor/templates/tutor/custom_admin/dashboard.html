@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head><title>Admin Dashboard</title>
+		<script src="{% static 'js/admin_dashboard.js' %}"></script>
+	</head>
+	<body>
+		
+		<h4> Welcome to Admin dashboard</h4>
+		<a href="{% url 'create_tutor' %}">Create Tutor</a>
+
+		<div>
+
+			{% for teacher in teachers %}
+			<div class="teacher_container">
+				<p>{{teacher.first_name}} {{teacher.last_name}}</p>
+				<a href="{% url 'edit_teacher' teacher.id %}">Edit</a>
+
+				<form method="post" action="{% url 'delete_teacher' teacher.id %}">
+					{% csrf_token %}
+					<button type="submit">Delete Teacher</button>
+				</form>
+			</div>
+			{% endfor %}
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,65 @@
+.eight-four-four-ad {
+	background-color: #e6f7ff;
+	border: 2px solid #007acc;
+	border-radius: 10px;
+	padding: 20px;
+	max-width: 600px;
+	margin: auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 03s ease;
+	font-family: 'Arial', sans-serif;
+}
+
+.eight-four-four-ad:hover {
+	transform: scale(1.03);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.eight-four-four-ad h3 {
+	color: #007acc;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.key-features ul {
+	margin-top: 20px;
+	list-style-type: none;
+	padding: 0px;
+}
+
+.key-features li {
+	padding-left: 20px;
+	position: relative;
+	margin-bottom: 10px;
+	color: #135dd4;
+}
+
+.eight-four-four-ad li:before {
+	content: "→ ";
+	position: absolute;
+	font-size: 1.2em;
+}
+
+
+.eight-four-four-ad p {
+	color: #333;
+	line-height: 1.6;
+	margin-bottom: 15px;
+}
+
+.eight-four-four-ad 
+
+.eight-four-four-ad .cta-button {
+	display: inline-block;
+	background-color: #007acc;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.eight-four-four-ad .cta-button:hover {
+	background-color: #005f99;
+}

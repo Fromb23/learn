@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* :root top level tag ie html */
+:root {
+	--primary-color: #0ce9f188;
+	--primary-color-dark: #ebf0f5;
+	--text-dark: #333333e0;
+	--text-light: #767268;
+	--white: #f1ebeb;
+	--max-width: 1200px;
+	--header-font: "Bebas Neue", sans-serif;
+}
+
+/* styling the first header */
+.nav_header {
+	padding: 1rem;
+	width: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--primary-color);
+}
+
+.nav-logo a {
+	font-size: 1.75rem;
+	font-weight: 400;
+	font-family: var(--header-font);
+	color: var(--white);
+}
+
+.nav_menu_btn {
+	font-size: 1.5rem;
+	color: var(--white);
+	cursor: pointer;
+}
+
+/* parent div of the header section */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+	color: black;
+}
+
+/* to handle signout icon */
+.header #user-profile {
+	position: relative;
+	right: 60px;
+	cursor: pointer;
+}
+
+/* handles user icon */
+.user-dropdown_content {
+	display: none;
+	position: absolute;
+	background-color: white;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+/* style signout icon */
+.user-dropdown_content i {
+	cursor: pointer;
+}
+
+/* js style */
+.show {
+	display: block;
+}
+
+.auth_link {
+	
+}
+
+.header .dropdown {
+            display: inline-block;
+	    margin: 10px;
+	    color: black;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--primary-color);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+/* body styling */
+
+.body-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 5px;
+	background-color: #f2e4ac;
+	border-radius: 5px;
+	height: 400px;
+}
+.text {
+	flex: 1;
+}
+.photo {
+	flex: 1;
+	text-align: right;
+	margin: auto 20px;
+}
+.photo img {
+	width: 80%;
+	height: 80%;
+}

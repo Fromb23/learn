@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static %}
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+		<title>Login</title>
+	</head>
+	<body style="background-color:#d3d8e0; width:100%;">
+		<form method="post" action="{% url 'login' %}">
+			<h1> Login </h1>
+			{% csrf_token %}
+			<label for="username"></label>
+			<input type="email" id="username" name="username" placeholder="&#128100;">
+			<label for="password"></label>
+			<input type="text" id="password" name="password" placeholder="&#128274;">
+			<button type="submit" name="action" value="login">Login</button>
+			{% if error %}
+			{{ error }}
+			{% endif %}
+		{% if error %}
+		<p class="error"> {{ error }}</p>
+		{% endif %}
+			
+			<div class="arrow">
+				<div class="line"></div>
+				<div class="name">Don't have an Account?</div>
+				<div class="line"></div>
+			</div>
+
+			<div class="register">
+				<button  value="register" name="action" type="submit" onclick="window.location.href='{% url 'sign_up' %}'">Register</button>
+			</div>
+		</form>
+<style>
+	.arrow {
+		margin: 10px;
+		display: flex;
+		align-items: center;
+	}
+	
+	.line {
+		flex-grow: 1;
+		height: 1px;
+		background-color: black;
+	}
+	.name {
+		margin: 0px 10px;
+	}
+	.register button {
+		border-radius: 5px;
+		background-color: #1db55c;
+		margin-top: 10px;
+	}
+	.error {
+		color: red;
+	}
+</style>
+	</body>
+</html>

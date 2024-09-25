@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Teachers Profile</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h3>Hello Mwalimu</h3>
+		<p>Welcome, {{user.last_name}}!</p>
+
+		<main>{% block content %}{% endblock %}</main>
+		<form method="post" action="{% url 'custom_logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+
+	</body>
+</html>
